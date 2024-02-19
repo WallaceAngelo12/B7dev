@@ -1,3 +1,146 @@
 body {
-  background-color: aqua;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+}
+
+header .logo:hover {
+  color: #b9b9b9;
+  transition: 0.3s;
+}
+
+header .menu {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+header .menu-line {
+  height: 3px;
+  background-color: #333;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.container .leftside {
+  flex: 1;
+  background-color: #3b576d;
+  display: flex;
+  align-items: center;
+}
+
+.leftside-info {
+  margin-left: 30px;
+}
+
+.leftside-info p {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0;
+  color: #b9b9b9;
+}
+.leftside-info h1 {
+  font-weight: bolder;
+  font-size: 4.5rem;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.leftside-info a {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #3b576d;
+  background: #fff;
+  padding: 20px 40px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #111;
+  transition: 0.3s;
+}
+
+.leftside-info a.light {
+  color: #fff;
+  background-color: #3b576d;
+}
+
+.leftside-info a:hover {
+  opacity: 0.8;
+}
+
+.container .rightside {
+  flex: 1;
+  background-image: url("../images/hero.jpg");
+  background-size: cover;
+  background-position: center top;
+}
+
+footer {
+  padding: 20px;
+  color: #9b9b9b;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: #9b9b9b;
+}
+
+@media (max-width: 750px) {
+  header {
+    position: initial;
+    background-color: #3b576d;
+  }
+  header .menu-line {
+    background-color: #fff;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .container .leftside {
+    flex: none;
+    justify-content: center;
+    text-align: center;
+  }
+  footer {
+    position: initial;
+  }
+}
+
+@media (max-width: 500px) {
+  .leftside-info h1 {
+    font-size: 3.5rem;
+  }
+  .leftside-info a {
+    font-size: 0.75rem;
+  }
 }
